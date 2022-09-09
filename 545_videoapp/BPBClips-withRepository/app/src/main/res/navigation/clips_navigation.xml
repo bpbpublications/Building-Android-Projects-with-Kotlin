@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/clips_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.bpb.android.clips.ui.home.HomeFragment"
+        android:label="@string/text_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/navigation_search_clips"
+        android:name="com.bpb.android.clips.ui.search.SearchClipsFragment"
+        android:label="fragment_search_clips"
+        tools:layout="@layout/fragment_search_clips" />
+
+    <fragment
+        android:id="@+id/navigation_add"
+        android:name="com.bpb.android.clips.ui.addclips.AddClipsFragment"
+        android:label="ADD CLIPS"
+        tools:layout="@layout/fragment_add_clips" />
+
+    <fragment
+        android:id="@+id/navigation_inbox"
+        android:name="com.bpb.android.clips.ui.inbox.InboxFragment"
+        android:label="ADD CLIPS"
+        tools:layout="@layout/fragment_add_clips" />
+
+    <fragment
+        android:id="@+id/navigation_me"
+        android:name="com.bpb.android.clips.ui.profile.ProfileFragment"
+        android:label="ADD CLIPS"
+        tools:layout="@layout/fragment_add_clips" />
+</navigation>

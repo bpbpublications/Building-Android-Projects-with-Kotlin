@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">B Messaging</string>
+    <string name="tab_text_1">Contacts</string>
+    <string name="tab_text_2">Calls</string>
+    <string name="tab_text_3">Profile</string>
+
+    <string name="login_error_msg">B Messaging</string>
+    <string name="exit">Exit</string>
+    <string name="retry">Retry</string>
+</resources>

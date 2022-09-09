@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BPB Clips</string>
+    <string name="text_home">Home</string>
+    <string name="text_search">Search</string>
+    <string name="text_add_clips">Add Clips</string>
+    <string name="text_inbox">Inbox</string>
+    <string name="text_me">Me</string>
+    <string name="text_share">Share</string>
+    <string name="exit">Exit</string>
+    <string name="retry">Retry</string>
+</resources>

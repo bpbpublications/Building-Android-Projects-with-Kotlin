@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#ec407a</color>
+    <color name="primaryLightColor">#ff77a9</color>
+    <color name="primaryDarkColor">#b4004e</color>
+    <color name="primaryTextColor">#000000</color>
+
+
+    <color name="secondaryColor">#c2185b</color>
+    <color name="secondaryLightColor">#fa5788</color>
+    <color name="secondaryDarkColor">#8c0032</color>
+    <color name="secondaryTextColor">#ffffff</color>
+
+    <color name="chat_bubble_bg">#fce4ec</color>
+
+    <!--<color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+-->
+   <!-- &lt;!&ndash; Green theme &ndash;&gt;
+    <color name="material_green_50">#E8F5E9</color>
+    <color name="material_green_300">#AED581</color>
+    <color name="material_green_500">#4CAF50</color>
+    <color name="material_green_700">#388E3C</color>
+    <color name="material_purple_a700">#AA00FF</color>-->
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="material_gray_300">#E0E0E0</color>
+    <color name="material_gray_500">#9e9e9e</color>
+
+    <color name="material_red_a200">#FF5252</color>
+</resources>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.2552083333333333" />
+        <entry key="app/src/main/res/drawable/bottom_tab_selector_item_dark.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/bottom_tab_selector_item_light.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_add_icon_dark.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_add_icon_light.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_anon_user_48dp.xml" value="0.17962962962962964" />
+        <entry key="app/src/main/res/drawable/ic_follow_avatar_bottom_icon.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_heart_icon.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_heart_select_icon.xml" value="0.24537037037037038" />
+        <entry key="app/src/main/res/drawable/ic_home_icon.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_inbox_icon.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.13055555555555556" />
+        <entry key="app/src/main/res/drawable/ic_message_icon.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_music_track_icon.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_person_icon.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_save_rect.xml" value="0.17962962962962964" />
+        <entry key="app/src/main/res/drawable/ic_search_icon.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_share_icon.xml" value="0.1" />
+        <entry key="app/src/main/res/layout-w936dp/activity_login.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.11927083333333334" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/clips_view.xml" value="0.375" />
+        <entry key="app/src/main/res/layout/fragment_add_clips.xml" value="0.21105072463768115" />
+        <entry key="app/src/main/res/layout/fragment_clips_list_view.xml" value="0.19701086956521738" />
+        <entry key="app/src/main/res/layout/fragment_clips_view.xml" value="0.234375" />
+        <entry key="app/src/main/res/layout/fragment_discover.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.165" />
+        <entry key="app/src/main/res/layout/fragment_inbox.xml" value="0.20471014492753623" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.20471014492753623" />
+        <entry key="app/src/main/res/layout/fragment_story_view.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/layout_login.xml" value="0.11927083333333334" />
+        <entry key="app/src/main/res/layout/layout_story_view.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/list_item_story_options.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/list_item_story_profilepic_options.xml" value="0.1" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

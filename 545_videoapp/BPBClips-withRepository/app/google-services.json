@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "918791489420",
+    "firebase_url": "https://bpb-clips-default-rtdb.firebaseio.com",
+    "project_id": "bpb-clips",
+    "storage_bucket": "bpb-clips.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918791489420:android:fc03e8d445d5d830dcf8a9",
+        "android_client_info": {
+          "package_name": "com.bpb.android.clips"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918791489420-71udemlj70pu3ktt5kugvgn7k4m7epn3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bpb.android.clips",
+            "certificate_hash": "c19a18711a5e6e1b28acc45e2839d731f4b885f0"
+          }
+        },
+        {
+          "client_id": "918791489420-attp8slpttr5uoetdjac6dimj5piqakf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAu1rD8hA7pY9IyvIebyARgTiIsQzq8mLY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918791489420-attp8slpttr5uoetdjac6dimj5piqakf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

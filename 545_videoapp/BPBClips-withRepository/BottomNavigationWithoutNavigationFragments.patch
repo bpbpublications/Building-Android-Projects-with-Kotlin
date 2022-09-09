@@ -1,0 +1,133 @@
+Index: app/src/main/java/com/bpb/android/clips/ui/main/MainActivity.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/bpb/android/clips/ui/main/MainActivity.kt b/app/src/main/java/com/bpb/android/clips/ui/main/MainActivity.kt
+--- a/app/src/main/java/com/bpb/android/clips/ui/main/MainActivity.kt	(revision 760ebdb497cf427cf1a32671dfd50d1f36ee41e2)
++++ b/app/src/main/java/com/bpb/android/clips/ui/main/MainActivity.kt	(date 1638136397094)
+@@ -4,25 +4,59 @@
+ import androidx.core.content.ContextCompat
+ import androidx.navigation.NavController
+ import androidx.navigation.NavDestination
+-import androidx.navigation.findNavController
+-import androidx.navigation.ui.setupWithNavController
+ import com.bpb.android.clips.BpbClipsBaseActivity
+ import com.bpb.android.clips.R
++import com.bpb.android.clips.ui.addclips.AddClipsFragment
++import com.bpb.android.clips.ui.home.HomeFragment
++import com.bpb.android.clips.ui.inbox.InboxFragment
++import com.bpb.android.clips.ui.profile.ProfileFragment
++import com.bpb.android.clips.ui.search.SearchClipsFragment
++import com.google.android.material.bottomnavigation.BottomNavigationView
+ import kotlinx.android.synthetic.main.activity_main.*
+ 
++
+ class MainActivity : BpbClipsBaseActivity(), NavController.OnDestinationChangedListener {
+ 
+     override fun onCreate(savedInstanceState: Bundle?) {
+         super.onCreate(savedInstanceState)
+         setContentView(R.layout.activity_main)
+ 
+-        val navController = findNavController(R.id.navHost)
+-        navView.setupWithNavController(navController)
++        /*val navController = findNavController(R.id.navHost)
++        navView.setupWithNavController(navController)*/
+ 
+         // navController.addOnDestinationChangedListener(this)
++        setBottomNavigation()
+         setDefaultBackground()
+     }
+ 
++    private fun setBottomNavigation() {
++
++        navView.setOnItemSelectedListener { menuItem ->
++
++            var currentFragment =
++                when (menuItem.itemId) {
++                    R.id.navigation_home -> HomeFragment()
++                    R.id.navigation_search_clips -> SearchClipsFragment()
++                    R.id.navigation_add -> AddClipsFragment()
++                    R.id.navigation_inbox -> InboxFragment()
++                    R.id.navigation_me -> ProfileFragment()
++                    else -> HomeFragment()
++                }
++
++            supportFragmentManager
++                .beginTransaction()
++                .replace(R.id.navHost, currentFragment)
++                .commit()
++
++            return@setOnItemSelectedListener true
++        }
++
++        // Show home screen as default
++        navView.selectedItemId = R.id.navigation_home
++    }
++
++    fun getNavigationView(): BottomNavigationView = navView
++
+     override fun onDestinationChanged(
+         controller: NavController,
+         destination: NavDestination,
+Index: app/src/main/res/layout/activity_main.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/res/layout/activity_main.xml b/app/src/main/res/layout/activity_main.xml
+--- a/app/src/main/res/layout/activity_main.xml	(revision 760ebdb497cf427cf1a32671dfd50d1f36ee41e2)
++++ b/app/src/main/res/layout/activity_main.xml	(date 1638134039809)
+@@ -40,7 +40,6 @@
+         app:layout_constraintBottom_toTopOf="@id/navView"
+         app:layout_constraintLeft_toLeftOf="parent"
+         app:layout_constraintRight_toRightOf="parent"
+-        app:layout_constraintTop_toTopOf="parent"
+-        app:navGraph="@navigation/clips_navigation" />
++        app:layout_constraintTop_toTopOf="parent" />
+ 
+ </androidx.constraintlayout.widget.ConstraintLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/bpb/android/clips/ui/addclips/AddClipsFragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/src/main/java/com/bpb/android/clips/ui/addclips/AddClipsFragment.kt b/app/src/main/java/com/bpb/android/clips/ui/addclips/AddClipsFragment.kt
+--- a/app/src/main/java/com/bpb/android/clips/ui/addclips/AddClipsFragment.kt	(revision 760ebdb497cf427cf1a32671dfd50d1f36ee41e2)
++++ b/app/src/main/java/com/bpb/android/clips/ui/addclips/AddClipsFragment.kt	(date 1638135265084)
+@@ -14,6 +14,7 @@
+ import com.bpb.android.clips.BpbClipsBaseFragment
+ import com.bpb.android.clips.R
+ import com.bpb.android.clips.repository.data.clips.model.Clips
++import com.bpb.android.clips.ui.main.MainActivity
+ import com.bpb.android.clips.ui.utils.ClipsViewModelFactory
+ import com.bpb.android.clips.ui.utils.showToast
+ import com.google.android.exoplayer2.DefaultRenderersFactory
+@@ -47,7 +48,12 @@
+             }
+         } else {
+             requireContext().showToast("Something went wrong")
+-            findNavController().navigate(R.id.navigation_home)
++            if (activity is MainActivity) {
++                (activity as MainActivity).getNavigationView().selectedItemId =
++                    R.id.navigation_home
++            }
++
++            //findNavController().navigate(R.id.navigation_home)
+         }
+     }
+ 
+@@ -96,7 +102,11 @@
+ 
+             when (state) {
+                 AddClipsViewModel.State.SUCCESS -> {
+-                    findNavController().navigate(R.id.navigation_home)
++                    if (activity is MainActivity) {
++                        (activity as MainActivity).getNavigationView().selectedItemId =
++                            R.id.navigation_home
++                    }
++                    // findNavController().navigate(R.id.navigation_home)
+                 }
+                 AddClipsViewModel.State.ERROR -> {
+                     requireContext().showToast("Something went wrong. Please try again")
